@@ -1,22 +1,127 @@
 body {
   margin: 0;
+  font-family: sans-serif;
+  background-color: black;
 }
 .navbartop {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   background-color: rgb(45, 47, 58);
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
-.logoandsearch{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width:18%;
+.logoandsearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 330px;
 }
 .navbartop svg {
   fill: #ffff;
-  width: 20px;
+  width: 33px;
+}
+.inputsearch {
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.inputsearch input {
+  padding-left: 24px;
+  border-radius: 3px;
+  height: 27px;
+  padding-top: 4px;
+  border: none;
+  color: white;
+  width: 250px;
+  background-color: rgb(74, 73, 83);
+}
+.inputsearch svg {
+  position: absolute;
+  left: 7px;
+  top: 9.2px;
+  fill: rgb(109, 109, 109);
+  width: 15px;
+  height: 15px;
+}
+
+.nv p {
+  margin: 0;
+  font-size: 11px;
+  color: rgb(182, 179, 179);
+}
+.navigations {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 580px;
+}
+.nv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.selected {
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  background-color: rgb(206, 202, 202);
+  border-radius: 12px;
+  bottom: -1px;
+}
+.selected2 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background-color: red;
+  padding: 1px;
+  height: 8px;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+}
+.navbartop .navigations .nv .selected2 p {
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+}
+.nv svg {
+  fill: rgb(182, 179, 179);
+}
+#choosen svg {
+  fill: white;
+}
+#choosen p {
+  color: white;
+  font-weight: bold;
+}
+.nvprofile img {
+  width: 30px;
+  border-radius: 9999px;
+}
+.nv select {
+  color: rgb(182, 179, 179);
+  background-color: rgb(45, 47, 58);
+  font-size: 9px;
+  border: none;
+}
+.nv.nvprofile {
+  border-right: 1px solid rgb(78, 77, 77);
+  padding-right: 10px;
+}
+.navigations a {
+  font-size: 12px;
+  color: rgb(224, 192, 6);
+  display: flex;
+  align-items: center;
 }
