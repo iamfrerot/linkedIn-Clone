@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background-color: black;
+  color: white;
 }
 .navbartop {
   display: flex;
@@ -80,7 +81,7 @@ body {
 .selected2 {
   position: absolute;
   top: 12px;
-  right: 16px;
+  right: 22px;
   background-color: red;
   padding: 1px;
   height: 8px;
@@ -124,4 +125,87 @@ body {
   color: rgb(224, 192, 6);
   display: flex;
   align-items: center;
+}
+main {
+  margin-top: 70px;
+  display: grid;
+  grid-template-areas:
+    "profile post follow"
+    "profile content follow"
+    "analysis content hiring"
+    "recent content links";
+}
+.aboutprofile {
+  grid-area: profile;
+  width: 210px;
+  height: 400px;
+  background-color: rgb(45, 47, 58);
+  border-radius: 12px;
+  position: relative;
+}
+.bg {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+.pr {
+  position: absolute;
+  width: 60px;
+  border-radius: 999px;
+  left: 76px;
+  top: 30px;
+}
+.name {
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  border-bottom: 0.1rem solid gray;
+}
+.big {
+  font-size: large;
+  font-weight: bold;
+  margin: 0;
+}
+.summary {
+  font-size: 12px;
+  color: rgb(156, 154, 154);
+  font-weight: 500;
+  margin: 0;
+  padding: 9px;
+  line-height: 17px;
+}
+.viewed {
+  font-size: 12px;
+  padding-left: 12px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  box-sizing: border-box;
+}
+.viewed p {
+  margin: 0;
+  padding-top: 4px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.one {
+  color: rgb(156, 154, 154);
+}
+.two {
+  color: #1d9bf0;
+  text-align: right;
+}
+.thecolor {
+  color: rgb(156, 154, 154);
+}
+.access svg {
+  width: 20px;
+}
+.access {
+  padding-left: 10px;
+  padding-top: 14px;
+  font-size: 13px;
 }
