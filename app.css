@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
-  color: white;
+  color: #e1e1e2;
 }
 .navbartop {
   display: flex;
@@ -10,9 +13,11 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: rgb(45, 47, 58);
+  background-color: #1d2226;
   width: 100%;
+  min-width: 840px;
   height: 60px;
+  z-index: 3;
 }
 .logoandsearch {
   display: flex;
@@ -31,20 +36,23 @@ body {
 }
 
 .inputsearch input {
-  padding-left: 24px;
+  padding-left: 27px;
   border-radius: 3px;
   height: 27px;
-  padding-top: 4px;
+  padding-top: 4.3px;
   border: none;
   color: white;
   width: 250px;
-  background-color: rgb(74, 73, 83);
+  background-color: #38434f;
+}
+.inputsearch ::placeholder {
+  color: #abb0b4;
 }
 .inputsearch svg {
   position: absolute;
   left: 7px;
-  top: 9.2px;
-  fill: rgb(109, 109, 109);
+  top: 9.01px;
+  fill: #abb0b4;
   width: 15px;
   height: 15px;
 }
@@ -80,10 +88,10 @@ body {
 }
 .selected2 {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 22px;
   background-color: red;
-  padding: 1px;
+  padding: 2px;
   height: 8px;
   width: 10px;
   display: flex;
@@ -126,22 +134,36 @@ body {
   display: flex;
   align-items: center;
 }
+.content {
+  display: flex;
+  justify-content: center;
+}
 main {
   margin-top: 70px;
   display: grid;
   grid-template-areas:
     "profile post follow"
-    "profile content follow"
-    "analysis content hiring"
-    "recent content links";
+    "profile line follow"
+    "profile content1 follow"
+    "anaysis content1 ."
+    "analysis content1 hiring"
+    "recent content1 ."
+    "recent content2 ."
+    ". content2 links"
+    ". content3 ."
+    ". bottom .";
+  row-gap: 6px;
+  grid-template-columns: 220px 600px 220px;
+  grid-template-rows: 110px;
 }
 .aboutprofile {
   grid-area: profile;
   width: 210px;
-  height: 400px;
-  background-color: rgb(45, 47, 58);
+  background-color: rgb(29 34 38);
   border-radius: 12px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .bg {
   border-top-right-radius: 12px;
@@ -180,6 +202,7 @@ main {
   font-size: 12px;
   padding-left: 12px;
   padding-top: 12px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -200,6 +223,7 @@ main {
 }
 .thecolor {
   color: rgb(156, 154, 154);
+  margin: 0;
 }
 .access svg {
   width: 20px;
@@ -207,5 +231,357 @@ main {
 .access {
   padding-left: 10px;
   padding-top: 14px;
+  padding-bottom: 10px;
   font-size: 13px;
+  border-top: 0.1rem solid gray;
+  border-bottom: 0.1rem solid gray;
+}
+.link {
+  display: flex;
+  align-items: center;
+}
+.link a {
+  color: white;
+}
+.my svg {
+  width: 20px;
+  fill: rgb(156, 154, 154);
+}
+.my p {
+  margin: 0;
+  font-size: 12px;
+}
+.my {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  width: 94px;
+  justify-content: space-between;
+}
+.analytics {
+  grid-area: analysis;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  grid-row-start: 4;
+  box-sizing: border-box;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+}
+.analytics svg {
+  width: 40px;
+  padding: 12px;
+  fill: rgb(60, 145, 255);
+}
+.visitors {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.three {
+  color: rgb(156, 154, 154);
+  font-weight: bold;
+}
+.four {
+  color: #1d9bf0;
+}
+.see {
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+  padding: 8px;
+  border-top: solid 0.1rem gray;
+}
+.see p {
+  margin: 0;
+}
+.page {
+  padding: 0 12px;
+}
+.recent {
+  grid-area: recent;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  box-sizing: border-box;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+  color: rgb(150, 150, 150);
+  padding: 0 0 12px 12px;
+  height: 310px;
+  position: sticky;
+  top: 61px;
+}
+.people p {
+  margin: 0;
+  padding-left: 3px;
+}
+.recent .people {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  font-size: 14px;
+}
+.recents {
+  display: flex;
+  flex-direction: column;
+}
+.othercolor {
+  color: #1d9bf0;
+  font-weight: bold;
+}
+.postprofile {
+  grid-area: post;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  padding: 12px;
+  border-radius: 12px;
+  flex-direction: column;
+  background-color: rgb(29 34 38);
+}
+.profandinput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.profandinput img {
+  width: 50px;
+  border-radius: 9999px;
+}
+.profandinput input {
+  width: 86%;
+  height: 40px;
+  background-color: rgb(29 34 38);
+  border: 0.1rem solid rgb(77, 80, 84);
+  border-radius: 26px;
+  color: white;
+  padding-left: 20px;
+}
+.profandinput ::placeholder {
+  color: #e9e9ea;
+  font-weight: 600;
+}
+.profandinput input:focus {
+  outline: none;
+}
+.choose svg {
+  width: 26px;
+}
+.choose p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+.choose {
+  display: flex;
+  margin-top: 12px;
+  justify-content: space-around;
+}
+.choose1,
+.choose2,
+.choose3,
+.choose4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choose1,
+.choose2 {
+  width: 70px;
+}
+.choose3 {
+  width: 55px;
+}
+.choose4 {
+  width: 106px;
+}
+.choose1 svg {
+  fill: #1d9bf0;
+}
+
+.choose2 svg {
+  fill: #80c15e;
+}
+
+.choose3 svg {
+  fill: #c79ef7;
+}
+.choose4 svg {
+  fill: #f5987e;
+}
+.theline {
+  grid-area: line;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.line {
+  background-color: #151515;
+  height: 1px;
+  width: 84%;
+}
+.sort {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 16%;
+}
+.top {
+  display: flex;
+  align-items: center;
+}
+.top p {
+  margin: 0;
+}
+.top svg {
+  width: 20px;
+}
+.feed {
+  grid-area: content1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+}
+.feed p {
+  margin: 0;
+  font-size: 13px;
+}
+.fedpstpro {
+  display: flex;
+  width: 46%;
+  justify-content: space-between;
+  padding: 0 0 9px 0;
+}
+.onlyname {
+  display: flex;
+  align-items: center;
+}
+.username {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.pro img {
+  width: 50px;
+}
+.feeddescription p {
+  display: inline;
+}
+.feedhead {
+  padding: 15px 15px;
+}
+.feedcontent img {
+  width: 100%;
+}
+.reactions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+.react {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.react p {
+  padding-left: 5px;
+}
+.reacts {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.feedbottom {
+  padding: 12px;
+}
+.feedbottom svg {
+  fill: #a4a5a7;
+}
+.feed2 {
+  grid-area: content2;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+}
+.feed2 p {
+  margin: 0;
+  font-size: 13px;
+}
+.feed2 .fedpstpro {
+  width: 31%;
+}
+.feed2 .feedcontent {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
+  row-gap: 3px;
+  column-gap: 3px;
+}
+.feed3 {
+  grid-area: content3;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+}
+.feed3 p {
+  margin: 0;
+  font-size: 13px;
+}
+.feed3 .fedpstpro {
+  width: 30%;
+}
+.bottom {
+  grid-area: bottom;
+  color: rgb(156, 154, 154);
+  display: flex;
+  justify-content: center;
+}
+.bottom ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 13px;
+  display: grid;
+  grid-template-areas:
+    "about accessibility help"
+    "privacy privacy ad"
+    "adver busin busin"
+    "get get more";
+    column-gap: 10px;
+    row-gap: 9px;
+}
+.about {
+  grid-area: about;
+}
+.accessibili {
+  grid-area: accessibility;
+}
+.help {
+  grid-area: help;
+}
+.privacys {
+  grid-area: privacy;
+}
+.ad {
+  grid-area: ad;
+}
+.adver {
+  grid-area: adver;
+}
+.bisin {
+  grid-area: busin;
+}
+.get{
+  grid-area: get;
+}
+
+.more{
+  grid-area: more;
 }
