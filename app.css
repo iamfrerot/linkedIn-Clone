@@ -145,15 +145,16 @@ main {
     "profile post follow"
     "profile line follow"
     "profile content1 follow"
-    "anaysis content1 ."
+    "anaysis content1 hiring"
     "analysis content1 hiring"
-    "recent content1 ."
+    "recent content1 links"
     "recent content2 ."
-    ". content2 links"
+    ". content2 ."
     ". content3 ."
     ". bottom .";
   row-gap: 6px;
-  grid-template-columns: 220px 600px 220px;
+  column-gap: 13px;
+  grid-template-columns: 210px 600px 240px;
   grid-template-rows: 110px;
 }
 .aboutprofile {
@@ -540,22 +541,24 @@ main {
 }
 .bottom {
   grid-area: bottom;
-  color: rgb(156, 154, 154);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .bottom ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   font-size: 13px;
+  color: rgb(156, 154, 154);
   display: grid;
   grid-template-areas:
     "about accessibility help"
     "privacy privacy ad"
     "adver busin busin"
     "get get more";
-    column-gap: 10px;
-    row-gap: 9px;
+  column-gap: 10px;
+  row-gap: 9px;
 }
 .about {
   grid-area: about;
@@ -568,6 +571,11 @@ main {
 }
 .privacys {
   grid-area: privacy;
+  display: flex;
+  align-items: center;
+}
+.privacys svg {
+  width: 14px;
 }
 .ad {
   grid-area: ad;
@@ -577,11 +585,92 @@ main {
 }
 .bisin {
   grid-area: busin;
+  display: flex;
+  align-items: center;
 }
-.get{
+.bisin svg {
+  width: 14px;
+}
+.get {
   grid-area: get;
 }
 
-.more{
+.more {
   grid-area: more;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+}
+.copyright svg {
+  width: 70px;
+}
+.follow {
+  grid-area: follow;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29 34 38);
+  border-radius: 12px;
+  padding: 0 10px;
+  justify-content: space-around;
+}
+.followhead {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.followhead svg {
+  width: 20px;
+}
+.followbody img {
+  width: 50px;
+  border-radius: 9999px;
+}
+.followbody p {
+  font-size: 13px;
+  margin: 0;
+}
+.person {
+  display: flex;
+  align-items: center;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6px;
+}
+.followbtn {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  border: #76797b solid 1px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+.followbtn p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.followfooter p {
+  margin: 0;
+  padding: 12px;
+}
+.hiring {
+  grid-area: hiring;
+  position: sticky;
+  top: 65px;
+}
+.hiring img {
+  width: 100%;
+  border-radius: 12px;
+}
+.links {
+  grid-area: links;
+  position: sticky;
+  top: 280px;
+}
+.links .copyright p {
+  margin: 0;
+  font-size: 13px;
 }
