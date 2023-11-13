@@ -668,7 +668,7 @@ main {
 .links {
   grid-area: links;
   position: sticky;
-  top: 280px;
+  top: 300px;
 }
 .links .copyright p {
   margin: 0;
