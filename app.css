@@ -15,7 +15,7 @@ body {
   top: 0;
   background-color: #1d2226;
   width: 100%;
-  min-width: 840px;
+  min-width: 1020px;
   height: 60px;
   z-index: 3;
 }
@@ -145,9 +145,9 @@ main {
     "profile post follow"
     "profile line follow"
     "profile content1 follow"
-    "anaysis content1 hiring"
-    "analysis content1 hiring"
-    "recent content1 links"
+    "anaysis content1 fixtotop"
+    "analysis content1 fixtotop"
+    "recent content1 fixtotop"
     "recent content2 ."
     ". content2 ."
     ". content3 ."
@@ -656,21 +656,108 @@ main {
   margin: 0;
   padding: 12px;
 }
-.hiring {
-  grid-area: hiring;
-  position: sticky;
-  top: 65px;
-}
+
 .hiring img {
   width: 100%;
   border-radius: 12px;
 }
-.links {
-  grid-area: links;
-  position: sticky;
-  top: 300px;
-}
+
 .links .copyright p {
   margin: 0;
   font-size: 13px;
+}
+.fixtotop {
+  grid-area: fixtotop;
+  position: sticky;
+  top: 65px;
+}
+@media all and (max-width: 320px) {
+  .aboutprofile,
+  .postprofile,
+  .feed,
+  .feed2,
+  .feed3,
+  .analytics,
+  .follow,
+  .recent,
+  .fixtotop {
+    grid-column-end: 2;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .choose4 {
+    width: fit-content;
+  }
+  .feed {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+  }
+  .navbartop {
+    display: none;
+  }
+
+  .theline {
+    display: none;
+  }
+  .choose p {
+    display: none;
+  }
+  .name {
+    border-bottom: none;
+  }
+
+  .pr {
+    left: 116px;
+  }
+  .fixtotop,
+  .recent {
+    position: static;
+  }
+  .viewed,
+  .my,
+  .access,
+  .bottom.feeder {
+    display: none;
+  }
+  .reacts {
+    width: 60%;
+  }
+  .fedpstpro {
+    width: inherit;
+  }
+  .feed2 .fedpstpro,
+  .feed3 .fedpstpro {
+    width: 70%;
+  }
+  .postprofile {
+    grid-row: inherit;
+  }
+  .analytics {
+    grid-row-start: inherit;
+  }
+
+  main {
+    width: 100%;
+    margin-top: 0;
+    grid-template-areas:
+      "profile"
+      "post"
+      "conten1"
+      "content2"
+      "content3"
+      "analysis"
+      "follow"
+      "recent"
+      "fixtotop"
+      "bottom";
+
+    row-gap: 7px;
+    column-gap: 0;
+
+    grid-template-columns: none;
+    grid-template-rows: none;
+    padding: 6px;
+    box-sizing: border-box;
+  }
 }
