@@ -671,7 +671,7 @@ main {
   position: sticky;
   top: 65px;
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 500px) {
   .aboutprofile,
   .postprofile,
   .feed,
@@ -708,11 +708,14 @@ main {
   }
 
   .pr {
-    left: 116px;
+    left: 43%;
   }
   .fixtotop,
   .recent {
     position: static;
+  }
+  .username {
+    margin-left: 10px;
   }
   .viewed,
   .my,
@@ -725,10 +728,13 @@ main {
   }
   .fedpstpro {
     width: inherit;
+    justify-content: flex-start;
+    padding: 0;
   }
+
   .feed2 .fedpstpro,
   .feed3 .fedpstpro {
-    width: 70%;
+    width: inherit;
   }
   .postprofile {
     grid-row: inherit;
